@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snow Globe — Halloween Puzzle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hdr">
+      <h1>🧩 Can you solve this?</h1>
+      <p class="sub">Enter the value of the last line. Get it right to reveal the passcode.</p>
+    </header>
+
+    <section class="card">
+      <img class="puzzle" src="puzzle.jpg" alt="Ghost pumpkin bats math puzzle" />
+      <div class="answer-row">
+        <label for="answer" class="lbl">Your answer</label>
+        <input id="answer" type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="e.g., 16" autocomplete="off" />
+        <button id="checkBtn" class="btn primary">Check</button>
+        <div id="msg" class="msg" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="passDlg">
+    <h2>Correct! 🎉</h2>
+    <p class="code-line">Passcode:</p>
+    <div class="code-box" id="codeBox">ELMSTREETDREAMER</div>
+    <div class="dlg-actions">
+      <button class="btn" id="copyBtn">Copy code</button>
+      <button class="btn primary" id="closeBtn">Close</button>
+    </div>
+  </dialog>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
